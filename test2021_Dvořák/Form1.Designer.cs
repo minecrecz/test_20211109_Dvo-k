@@ -28,13 +28,217 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.text_jmeno = new System.Windows.Forms.TextBox();
+            this.text_cisloUctu = new System.Windows.Forms.TextBox();
+            this.labelJmeno = new System.Windows.Forms.Label();
+            this.labelCisloUctu = new System.Windows.Forms.Label();
+            this.lbl_aktualni = new System.Windows.Forms.Label();
+            this.text_zustatek = new System.Windows.Forms.TextBox();
+            this.č_vklad = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_vklad = new System.Windows.Forms.Button();
+            this.btn_výběr = new System.Windows.Forms.Button();
+            this.btn_platba = new System.Windows.Forms.Button();
+            this.č_vyber = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.č_vklad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.č_vyber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // text_jmeno
+            // 
+            this.text_jmeno.Location = new System.Drawing.Point(208, 44);
+            this.text_jmeno.Name = "text_jmeno";
+            this.text_jmeno.Size = new System.Drawing.Size(100, 20);
+            this.text_jmeno.TabIndex = 0;
+            // 
+            // text_cisloUctu
+            // 
+            this.text_cisloUctu.Location = new System.Drawing.Point(208, 70);
+            this.text_cisloUctu.Name = "text_cisloUctu";
+            this.text_cisloUctu.Size = new System.Drawing.Size(100, 20);
+            this.text_cisloUctu.TabIndex = 1;
+            // 
+            // labelJmeno
+            // 
+            this.labelJmeno.AutoSize = true;
+            this.labelJmeno.Location = new System.Drawing.Point(101, 51);
+            this.labelJmeno.Name = "labelJmeno";
+            this.labelJmeno.Size = new System.Drawing.Size(41, 13);
+            this.labelJmeno.TabIndex = 2;
+            this.labelJmeno.Text = "Jméno:";
+            // 
+            // labelCisloUctu
+            // 
+            this.labelCisloUctu.AutoSize = true;
+            this.labelCisloUctu.Location = new System.Drawing.Point(93, 76);
+            this.labelCisloUctu.Name = "labelCisloUctu";
+            this.labelCisloUctu.Size = new System.Drawing.Size(57, 13);
+            this.labelCisloUctu.TabIndex = 3;
+            this.labelCisloUctu.Text = "číslo účtu:";
+            // 
+            // lbl_aktualni
+            // 
+            this.lbl_aktualni.AutoSize = true;
+            this.lbl_aktualni.Location = new System.Drawing.Point(75, 108);
+            this.lbl_aktualni.Name = "lbl_aktualni";
+            this.lbl_aktualni.Size = new System.Drawing.Size(93, 13);
+            this.lbl_aktualni.TabIndex = 4;
+            this.lbl_aktualni.Text = "aktuální stav účtu";
+            // 
+            // text_zustatek
+            // 
+            this.text_zustatek.Location = new System.Drawing.Point(208, 108);
+            this.text_zustatek.Name = "text_zustatek";
+            this.text_zustatek.Size = new System.Drawing.Size(100, 20);
+            this.text_zustatek.TabIndex = 5;
+            // 
+            // č_vklad
+            // 
+            this.č_vklad.Location = new System.Drawing.Point(61, 164);
+            this.č_vklad.Maximum = new decimal(new int[] {
+            200000,
+            0,
+            0,
+            0});
+            this.č_vklad.Name = "č_vklad";
+            this.č_vklad.Size = new System.Drawing.Size(120, 20);
+            this.č_vklad.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(194, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "vklad";
+            // 
+            // btn_vklad
+            // 
+            this.btn_vklad.Location = new System.Drawing.Point(233, 164);
+            this.btn_vklad.Name = "btn_vklad";
+            this.btn_vklad.Size = new System.Drawing.Size(75, 23);
+            this.btn_vklad.TabIndex = 8;
+            this.btn_vklad.Text = "vložit";
+            this.btn_vklad.UseVisualStyleBackColor = true;
+            this.btn_vklad.Click += new System.EventHandler(this.btn_vklad_Click);
+            // 
+            // btn_výběr
+            // 
+            this.btn_výběr.Location = new System.Drawing.Point(233, 216);
+            this.btn_výběr.Name = "btn_výběr";
+            this.btn_výběr.Size = new System.Drawing.Size(75, 23);
+            this.btn_výběr.TabIndex = 9;
+            this.btn_výběr.Text = "vyber";
+            this.btn_výběr.UseVisualStyleBackColor = true;
+            this.btn_výběr.Click += new System.EventHandler(this.btn_výběr_Click);
+            // 
+            // btn_platba
+            // 
+            this.btn_platba.Location = new System.Drawing.Point(233, 273);
+            this.btn_platba.Name = "btn_platba";
+            this.btn_platba.Size = new System.Drawing.Size(75, 23);
+            this.btn_platba.TabIndex = 10;
+            this.btn_platba.Text = "plať";
+            this.btn_platba.UseVisualStyleBackColor = true;
+            this.btn_platba.Click += new System.EventHandler(this.btn_platba_Click);
+            // 
+            // č_vyber
+            // 
+            this.č_vyber.Location = new System.Drawing.Point(61, 218);
+            this.č_vyber.Name = "č_vyber";
+            this.č_vyber.Size = new System.Drawing.Size(120, 20);
+            this.č_vyber.TabIndex = 11;
+            this.č_vyber.ValueChanged += new System.EventHandler(this.č_vyber_ValueChanged);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(61, 275);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(194, 201);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "výběr";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(194, 260);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Platba";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(667, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Dvořák Adam";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.č_vyber);
+            this.Controls.Add(this.btn_platba);
+            this.Controls.Add(this.btn_výběr);
+            this.Controls.Add(this.btn_vklad);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.č_vklad);
+            this.Controls.Add(this.text_zustatek);
+            this.Controls.Add(this.lbl_aktualni);
+            this.Controls.Add(this.labelCisloUctu);
+            this.Controls.Add(this.labelJmeno);
+            this.Controls.Add(this.text_cisloUctu);
+            this.Controls.Add(this.text_jmeno);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.č_vklad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.č_vyber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox text_jmeno;
+        private System.Windows.Forms.TextBox text_cisloUctu;
+        private System.Windows.Forms.Label labelJmeno;
+        private System.Windows.Forms.Label labelCisloUctu;
+        private System.Windows.Forms.Label lbl_aktualni;
+        private System.Windows.Forms.TextBox text_zustatek;
+        private System.Windows.Forms.NumericUpDown č_vklad;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_vklad;
+        private System.Windows.Forms.Button btn_výběr;
+        private System.Windows.Forms.Button btn_platba;
+        private System.Windows.Forms.NumericUpDown č_vyber;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
     }
 }
 
