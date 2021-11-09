@@ -23,7 +23,7 @@ namespace test2021_Dvořák
             this.zustatek = zustatek;
             this.cisloUctu = cisloUctu;
         }
-        public int Vklad(int vklad)
+        public void Vklad(int vklad)
         {
 
             if (vklad + zustatek <= max)
@@ -51,7 +51,7 @@ namespace test2021_Dvořák
                 MessageBox.Show("nebylo možno vybrat");
             }
         }
-        public float Platba(float platba)
+        public void Platba(float platba)
         {
 
             if (platba - zustatek <= 0 && platba <= tyden_Limit)
