@@ -15,7 +15,7 @@ namespace test2021_Dvořák
         public int max = 200000;
         public int tyden_Limit = 3000;
         public int platba_Limit = 10000;
-
+        public float Stav = 0;
 
         public Banka(string jmeno, int zustatek, string cisloUctu)
         {
@@ -23,48 +23,51 @@ namespace test2021_Dvořák
             this.zustatek = zustatek;
             this.cisloUctu = cisloUctu;
         }
-        public float Vklad(int vklad)
+        public void Vklad(int vklad)
         {
 
-            if (vklad + zustatek <= max)
+           if(zustatek > max)
             {
-                zustatek += vklad;
-                return zustatek;
+                MessageBox.Show("Tato částka přesahuje možnost maximálního vkladu");
             }
-            else if(vklad + zustatek >= max)
+           else if(zustatek<=max && zustatek>0)
             {
+                Stav += zustatek;
+                MessageBox.Show("vklad byl úspěšný");
+                
 
-                MessageBox.Show("Váš maximální limit je: " + max);
-                return max;
             }
 
         }
-        public int Vyber(int vyber)
+        public void Vyber(int vyber)
         {
 
-            if (vyber - zustatek <= 0 && vyber >= tyden_Limit)
+            if (zustatek <=Stav && zustatek !=0)
             {
-                zustatek -= vyber;
-                return zustatek;
+
+                MessageBox.Show($"vybral jsi {zustatek} kč a zbylo ti {Stav} ");
             }
-            else if (vyber > zustatek)
+            else if (vyber > Stav)
                {
                 MessageBox.Show("nebylo možno vybrat");
-                zustatek = 0;
-                return zustatek;
+                
             }
         }
-        public int Platba(int platba)
+        public void Platba(int platba)
         {
 
-            if (platba - zustatek <= 0 && platba <= tyden_Limit)
+            if (zustatek>platba_Limit)
             {
-                zustatek -= platba;
-                return platba;
+                MessageBox.Show("tvoje platba převyšuje maximální limit ");
             }
-            else if(platba > zustatek)
+            else if(platba < zustatek)
                {
-                MessageBox.Show("nebylo možno vybrat");
+                MessageBox.Show("není dostatek peněz na účtu");
+            }
+            else if (zustatek<= platba_Limit)
+            {
+                Stav -= zustatek;
+                MessageBox.Show($"Platba byla úspěšná");
             }
         }
     }

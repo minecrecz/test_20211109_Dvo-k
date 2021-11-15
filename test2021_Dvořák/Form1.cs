@@ -14,6 +14,8 @@ namespace test2021_Dvořák
     public partial class Form1 : Form
     {
         private Banka banka;
+        private readonly int zustatek;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,13 +34,15 @@ namespace test2021_Dvořák
 
         private void btn_vklad_Click(object sender, EventArgs e)
         {
-            var zustatek = banka.Vklad(Convert.ToInt32(č_vklad));
-            MessageBox.Show($"Vloženo{zustatek}kč");
+            
+            banka.Vklad(zustatek);
+            MessageBox.Show($"Vloženo{zustatek}kč" );
         }
 
         private void btn_výběr_Click(object sender, EventArgs e)
         {
-            var zustatek = banka.Vyber(Convert.ToInt32(č_vyber));
+            
+            banka.Vyber(zustatek);
             MessageBox.Show($"Vybral si{zustatek}kč");
           
         }
@@ -50,7 +54,7 @@ namespace test2021_Dvořák
 
         private void btn_platba_Click(object sender, EventArgs e)
         {
-            var zustatek = banka.Platba(Convert.ToInt32(č_vklad));
+            banka.Platba(zustatek);
             MessageBox.Show($"Zaplatil si {zustatek}kč");
         }
     }
